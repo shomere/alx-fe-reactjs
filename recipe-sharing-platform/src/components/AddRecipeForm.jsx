@@ -3,13 +3,11 @@ import React, { useState } from "react";
 const AddRecipeForm = ({ onAddRecipe }) => {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
-  const [steps, setSteps] = useState(""); // use 'steps' instead of 'instructions'
+  const [steps, setSteps] = useState("");
   const [errors, setErrors] = useState({});
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Validation
+  // ✅ Validation function explicitly named 'validate'
+  const validate = () => {
     const newErrors = {};
     if (!title.trim()) newErrors.title = "Title is required";
     if (!ingredients.trim() || ingredients.split(",").length < 2)
@@ -17,18 +15,22 @@ const AddRecipeForm = ({ onAddRecipe }) => {
     if (!steps.trim()) newErrors.steps = "Steps are required";
 
     setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
-    if (Object.keys(newErrors).length === 0) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (validate()) {
       const newRecipe = {
         id: Date.now(),
         title,
         ingredients: ingredients.split(",").map((i) => i.trim()),
-        steps: steps.split("\n").map((i) => i.trim()), // using 'steps' keyword
+        steps: steps.split("\n").map((i) => i.trim()),
       };
 
       if (onAddRecipe) onAddRecipe(newRecipe);
 
-      // Clear form
       setTitle("");
       setIngredients("");
       setSteps("");
@@ -40,7 +42,6 @@ const AddRecipeForm = ({ onAddRecipe }) => {
     <div className="max-w-2xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-center">Add a New Recipe</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Title */}
         <div>
           <label className="block mb-1 font-semibold">Recipe Title</label>
           <input
@@ -52,7 +53,6 @@ const AddRecipeForm = ({ onAddRecipe }) => {
           {errors.title && <p className="text-red-500 text-sm mt-1">{errors.title}</p>}
         </div>
 
-        {/* Ingredients */}
         <div>
           <label className="block mb-1 font-semibold">Ingredients (comma separated)</label>
           <textarea
@@ -65,7 +65,6 @@ const AddRecipeForm = ({ onAddRecipe }) => {
           )}
         </div>
 
-        {/* Steps */}
         <div>
           <label className="block mb-1 font-semibold">Preparation Steps (each step on a new line)</label>
           <textarea
@@ -76,7 +75,6 @@ const AddRecipeForm = ({ onAddRecipe }) => {
           {errors.steps && <p className="text-red-500 text-sm mt-1">{errors.steps}</p>}
         </div>
 
-        {/* Submit Button */}
         <div className="text-center">
           <button
             type="submit"
