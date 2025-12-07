@@ -3,25 +3,24 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/300",
-    "ingredients": ["200g spaghetti", "100g pancetta", "2 eggs", "50g parmesan", "Black pepper"],
-    "instructions": ["Boil pasta", "Fry pancetta", "Mix eggs and cheese", "Combine everything"]
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Spaghetti", "Eggs", "Parmesan Cheese", "Bacon", "Black Pepper"],
+    "instructions": ["Boil spaghetti", "Cook bacon", "Mix eggs and cheese", "Combine all ingredients"]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
-    "summary": "Chunks of grilled chicken cooked in a buttery and creamy tomato-based gravy.",
-    "image": "https://via.placeholder.com/300",
-    "ingredients": ["500g chicken", "100g yogurt", "2 tbsp tikka masala spice", "1 cup tomato sauce", "Salt"],
+    "summary": "Chunks of grilled chicken cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Chicken", "Yogurt", "Tomatoes", "Butter", "Spices"],
     "instructions": ["Marinate chicken", "Grill chicken", "Prepare sauce", "Combine chicken and sauce"]
   },
   {
     "id": 3,
     "title": "Avocado Salad",
-    "summary": "A fresh and healthy mix of avocado, tomatoes, corn, and bright lime dressing.",
-    "image": "https://via.placeholder.com/300",
-    "ingredients": ["1 avocado", "1 tomato", "1/2 cup corn", "1 tbsp olive oil", "Salt"],
-    "instructions": ["Chop vegetables", "Mix ingredients", "Add dressing", "Serve fresh"]
+    "summary": "A fresh salad with avocado, tomatoes, and onions.",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Avocado", "Tomatoes", "Onion", "Olive Oil", "Lemon Juice"],
+    "instructions": ["Chop vegetables", "Mix in a bowl", "Add dressing", "Serve fresh"]
   }
 ]
-
