@@ -3,19 +3,25 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/300"
+    "image": "https://via.placeholder.com/300",
+    "ingredients": ["200g spaghetti", "100g pancetta", "2 eggs", "50g parmesan", "Black pepper"],
+    "instructions": ["Boil pasta", "Fry pancetta", "Mix eggs and cheese", "Combine everything"]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken cooked in a buttery and creamy tomato-based gravy.",
-    "image": "https://via.placeholder.com/300"
+    "image": "https://via.placeholder.com/300",
+    "ingredients": ["500g chicken", "100g yogurt", "2 tbsp tikka masala spice", "1 cup tomato sauce", "Salt"],
+    "instructions": ["Marinate chicken", "Grill chicken", "Prepare sauce", "Combine chicken and sauce"]
   },
   {
     "id": 3,
     "title": "Avocado Salad",
     "summary": "A fresh and healthy mix of avocado, tomatoes, corn, and bright lime dressing.",
-    "image": "https://via.placeholder.com/300"
+    "image": "https://via.placeholder.com/300",
+    "ingredients": ["1 avocado", "1 tomato", "1/2 cup corn", "1 tbsp olive oil", "Salt"],
+    "instructions": ["Chop vegetables", "Mix ingredients", "Add dressing", "Serve fresh"]
   }
 ]
 
